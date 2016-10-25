@@ -1,25 +1,28 @@
 $(document).ready(function() {
-  $("#blanks form").submit(function(event){
-    var inputs = ['name1', 'name2', 'street', 'city', 'zip'];
-    inputs.forEach(function(input) {
-      var userInput = $("input#" + input).val();
-      $("." + input).text(userInput);
+  var tags = [['h1','a header'], ['p','a paragraph'], ['img','an image']];
+
+  tags.forEach(function(tag){
+    $(tag[0]).click(function() {
+      alert("This is" + tag[1]);
     });
-      $(".letter").show();
-
-    event.preventDefault();
   });
-});
 
-//
-// var inputName1 = $("input#name1").val();
-// var inputName2 = $("input#name2").val();
-// var inputStreet = $("input#street").val();
-// var inputCity = $("input#city").val();
-// var inputZip = $("input#zip").val();
-//
-// $(".name1").text(inputName1);
-// $(".name2").text(inputName2);
-// $(".street").text(inputStreet);
-// $(".city").text(inputCity);
-// $(".zip").text(inputZip);
+  // var tags = ['h1','p','img'];
+  // var comments = ["a header", "a paragraph", "an image"];
+  // tags.forEach(function(tag){
+  //   $("tag").click(function() {
+  //     alert("This is" + comments[]);
+  //   });
+  // });
+
+  });
+  // $("h1").click(function() {
+  //   alert("This is a header.");
+  // });
+  //
+  // $("p").click(function() {
+  //   alert("This is a paragraph.");
+  // });
+  //
+  // $("img").click(function() {
+  //   alert("This is an image.");
